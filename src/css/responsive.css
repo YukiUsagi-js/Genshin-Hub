@@ -1,0 +1,62 @@
+@media(max-width: 750px){
+    body{
+        zoom: 0.8;
+        padding: 10px;
+    }
+    main {
+        flex-direction: column; /* Stack items vertically */
+        align-items: center;
+        justify-content: center;
+        padding: 20px; /* Reduce padding */
+    }
+    .Gnosis, .Archons{
+        flex-direction: column;
+        align-items: center;
+        padding: 30px 0;
+        gap: 15px; /* Reduce gap between elements */
+    }
+    .cartao-Gnosis, .cartao-Archons{
+        max-width: 300; /* Full width on mobile */
+        margin-bottom: 20px; /* Add spacing between cards */
+    }
+    .cartao-Gnosis img, .cartao-Archons img {
+        max-width: 100;
+        height: auto;
+    }
+    .listagem .Gnosis, .listagem .Archons {
+        flex-direction: column;
+        align-items: center;
+        padding: 10px;
+        
+    }
+    .listagem ul {
+        display: grid; /* Use grid layout */
+        grid-template-columns: repeat(2, 1fr); /* Create 4 equal columns */
+        gap: 8px; /* Space between items */
+        width: 100%; /* Ensure it takes full width */
+        max-width: 1000px; /* Optional: Limit max width for aesthetics */
+        margin: 0 auto; /* Center the grid on the page */
+    }
+    .navegacao ul {
+        display: flex;          /* Use flexbox for layout */
+        justify-content: center; /* Center items horizontally */
+        gap: 10px;              /* Add space between buttons */
+    }
+
+    .nav-item {
+        flex: 1;                /* Ensure nav items take equal space */
+    }
+
+    .nav-button, .teyvat-button {
+        padding: 14px 35px;
+        font-size: 18px;
+    }
+    /* Navigation adjustments */
+    .nav-button {
+        padding: 12px 30px;
+        font-size: 16px;
+    }
+    .teyvat-button {
+        margin-left: 10%;
+    }
+}

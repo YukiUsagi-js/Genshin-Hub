@@ -1,0 +1,20 @@
+
+.fade-in {
+    opacity: 1; /* Fully visible */
+    transition: opacity 0.5s ease-in; /* Duration of fade-in */
+}
+
+.fade-out {
+    opacity: 0; /* Fully transparent */
+    transition: opacity 0.5s ease-out; /* Duration of fade-out */
+}
+
+body {
+    opacity: 1; /* Ensure body is visible initially */
+    transition: opacity 0.5s ease; /* Smooth transition for body */
+}
+
+.main-content {
+    opacity: 1;
+    transition: opacity 0.5s ease;
+}

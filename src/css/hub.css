@@ -1,0 +1,471 @@
+
+.Gnosis {
+    display: flex;
+    gap: 30px;
+    padding: 30px 0;
+}
+
+.cartao-Gnosis {
+    display: flex; /* Enable flexbox */
+    flex-direction: column; /* Stack items vertically */
+    align-items: center; /* Center horizontally */
+    justify-content: center; /* Center vertically */
+    display: none; /* Ensure it stays hidden until activated */
+    max-width: 360px; /* Adjust this to your desired width */
+    border-radius: 15px; /* Slightly larger radius for a softer look */
+    box-shadow: rgba(0, 0, 0, 0.5) 0px 10px 30px; /* Darker shadow for depth */
+    transition: transform 0.3s ease-in-out; /* Animation for hover effect */
+    overflow: hidden; /* Prevent overflow of elements */
+}
+
+.cartao-Gnosis.aberto {
+    display: block;
+}
+
+.cartao-Gnosis img {
+    max-width: 650px; /* Maximum width */
+    max-height: 600px; /* Maximum height */
+    width: auto; /* Auto width to maintain aspect ratio */
+    height: auto; /* Auto height to maintain aspect ratio */
+    margin-top: 10px; /* Space above the image */
+    border-radius: 15px; /* Match the card's rounded corners */
+    display: block; /* Ensure it behaves as a block element for centering */
+}
+
+
+.cartao-Gnosis .cartao-topo {
+    padding: 20px;
+    background: rgba(0, 0, 0, 0.6); /* Semi-transparent background */
+    border-bottom-left-radius: 15px;
+    border-bottom-right-radius: 15px;
+}
+
+.cartao-Gnosis .nome {
+    font-size: 24px; /* Larger font size for names */
+    margin-bottom: 5px;
+}
+
+.cartao-Gnosis .tipo {
+    background-color: rgba(255, 255, 255, 0.438); /* Semi-transparent background */
+    font-size: 14px;
+    opacity: 0.9;
+    border-radius: 10px;
+    padding: 5px 10px;
+    text-align: center; /* Center the type text */
+}
+
+.cartao-Gnosis .detalhes {
+    color: #ffffff;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.cartao-Gnosis .cartao-informacoes {
+    background-color: rgba(255, 255, 255, 0.9);
+    display: flex;
+    justify-content: space-between;
+    padding: 20px;
+    border-top: 2px solid #f0b16b; /* Highlight the border with a color */
+    border-bottom-left-radius: 15px;
+    border-bottom-right-radius: 15px;
+}
+
+.cartao-Gnosis .cartao-informacoes h3 {
+    font-size: 20px;
+    margin-bottom: 10px;
+    color: #ff6f61; /* Change header color */
+    text-align: center; /* Center align */
+}
+
+.cartao-Gnosis .cartao-informacoes .descricao {
+    padding: 0 10px;
+    font-size: 14px;
+    max-height: 150px;
+    overflow-y: auto; /* Add scroll if text overflows */
+    color: #333; /* Darker color for description for readability */
+}
+
+.tipo-Nivalis {
+    background-color: #A3EFFF; /* Light blue for Nivalis */
+}
+
+.tipo-Anemo {
+    background-color: #80FFD7; /* Light greenish-blue for Anemo */
+}
+
+.tipo-Geo {
+    background-color: #FFAC45; /* Warm yellow for Geo */
+}
+
+.tipo-Electro {
+    background-color: #B57DFF; /* Light purple for Electro */
+}
+
+.tipo-Dendro {
+    background-color: #9BFF76; /* Bright green for Dendro */
+}
+
+.tipo-Hydro {
+    background-color: #3CFFFF; /* Aqua blue for Hydro */
+}
+
+.tipo-Pyro {
+    background-color: #FF5733; /* Bright red for Pyro */
+}
+
+.tipo-Cryo {
+    background-color: #B5F8FF; /* Light icy blue for Cryo */
+}
+
+.listagem {
+    max-width: 220px;
+    padding-top: 50px;
+}
+
+.listagem .Gnosis {
+    background-color: rgba(107, 114, 122, 0.9); /* Base color for the item */
+    color: #ffffff;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 15px; /* Increased padding for comfort */
+    margin-bottom: 15px; /* Added space between items */
+    cursor: pointer;
+    border-radius: 20px; /* Rounded corners */
+    transition: 0.3s ease-in-out; /* Smooth transition for hover effect */
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3); /* Add shadow for depth */
+}
+
+/* Hover effect for the item */
+.listagem .Gnosis:hover {
+    transform: translateY(-5px); /* Lift effect on hover */
+    background-color: rgba(133, 236, 193, 0.9); /* Highlight color on hover */
+    box-shadow: 0 8px 25px rgba(133, 236, 193, 0.5); /* Enhanced glow on hover */
+}
+
+.listagem .Gnosis span {
+    padding-right: 10px;
+    font-weight: bold; /* Make text stand out */
+}
+
+/* Active state for the item */
+.listagem .Gnosis.ativo {
+    background-color: rgba(133, 236, 193, 1); /* Solid active item color */
+}
+
+/* Add a transition effect to the image */
+.listagem .Gnosis img {
+    width: 30%; /* Size of the icons */
+    border-radius: 10px; /* Rounded icons */
+    transition: transform 0.3s ease; /* Smooth scaling */
+}
+
+.listagem .Gnosis img:hover {
+    transform: scale(1.1); /* Slightly enlarge the image on hover */
+}
+
+.navegacao {
+    padding-top: 34px;
+    display: flex;
+    justify-content: center;
+    margin-top: 30px;
+}
+
+.navegacao ul {
+    list-style: none;
+    padding: 0;
+    padding-bottom: 60px;
+}
+
+.nav-item {
+    margin: 25px 15px;
+}
+
+/* Main navigation buttons */
+.nav-button {
+    display: inline-block;
+    background: linear-gradient(145deg, #34495e8a, #4ca2af81); /* Stylish gradient background inspired by Teyvat elements */
+    color: #f0f9ff; /* Soft light text color */
+    padding: 16px 40px; /* Enhanced padding for a larger look */
+    border-radius: 60px; /* More rounded for a smoother, mystical effect */
+    text-align: center;
+    text-decoration: none;
+    font-size: 20px; /* Increased font size for better emphasis */
+    font-weight: bold;
+    font-family: 'Poppins', sans-serif; /* Clean, modern font */
+    transition: transform 0.4s ease, background-color 0.4s ease, box-shadow 0.4s ease;
+    box-shadow: 0 6px 20px rgba(0, 255, 255, 0.3), inset 0 0 12px rgba(255, 255, 255, 0.25); /* Stronger glowing effect */
+    backdrop-filter: blur(4px); /* Subtle blur behind button */
+    border: 1px solid rgba(255, 255, 255, 0.3); /* Slight border for definition */
+    position: relative;
+    overflow: hidden;
+}
+
+.nav-button::before {
+    content: '';
+    position: absolute;
+    top: 50%;
+    left: -30%;
+    width: 150%;
+    height: 300%;
+    background: radial-gradient(circle, rgba(255,255,255,0.4), rgba(255,255,255,0.1));
+    transition: transform 0.5s ease;
+    transform: translateX(-200%) translateY(-50%);
+    z-index: 1;
+}
+
+.nav-button:hover::before {
+    transform: translateX(100%) translateY(-50%);
+}
+
+.nav-button:hover {
+    background: linear-gradient(145deg, #81d4fa73, #00abc179); /* Brighter gradient on hover */
+    color: #ffffff; /* White text on hover */
+    transform: scale(1.1); /* Slightly larger on hover */
+    box-shadow: 0 10px 30px rgba(129, 212, 250, 0.8), inset 0 0 15px rgba(255, 255, 255, 0.3); /* More intense glow */
+    z-index: 2; /* Elevate hover effect */
+}
+
+/* Active state for nav-button */
+.nav-button:active {
+    transform: scale(1.05); /* Slight compression */
+    box-shadow: 0 4px 10px rgba(0, 200, 150, 0.6), inset 0 0 5px rgba(255, 255, 255, 0.2); /* Dimmed shadow */
+    transition: transform 0.2s ease;
+}
+.nav-teyvat {
+    padding-right: 25px;
+    padding-top: auto;
+}
+
+/* Special Teyvat button */
+.teyvat-button {
+    display: inline-block;
+    background-color: #c2f8f583; /* Light cyan background */
+    color: #f2feffd7;
+    padding: 16px 40px;
+    border-radius: 60px;
+    text-align: center;
+    text-decoration: none;
+    font-size: 20px;
+    font-weight: bold;
+    backdrop-filter: blur(6px);
+    box-shadow: 0 6px 25px rgba(0, 255, 255, 0.4), inset 0 0 15px rgba(255, 255, 255, 0.2);
+    transition: transform 0.3s ease, background-color 0.3s ease, box-shadow 0.3s ease;
+    border: 1px solid rgba(255, 255, 255, 0.3); /* Subtle border */
+    position: relative;
+    overflow: hidden;
+}
+
+.teyvat-button::before {
+    content: '';
+    position: absolute;
+    top: 50%;
+    left: -30%;
+    width: 150%;
+    height: 300%;
+    background: radial-gradient(circle, rgba(255,255,255,0.4), rgba(255,255,255,0.1));
+    transition: transform 0.5s ease;
+    transform: translateX(-200%) translateY(-50%);
+    z-index: 1;
+}
+
+.teyvat-button:hover::before {
+    transform: translateX(100%) translateY(-50%);
+}
+
+.teyvat-button:hover {
+    background-color: #9de9e383;
+    color: #ffffff;
+    transform: scale(1.1);
+    box-shadow: 0 10px 35px rgba(133, 236, 193, 0.8), inset 0 0 20px rgba(255, 255, 255, 0.3);
+    z-index: 2;
+}
+
+.teyvat-button:active {
+    transform: scale(1.05);
+    box-shadow: 0 4px 15px rgba(0, 200, 150, 0.6), inset 0 0 10px rgba(255, 255, 255, 0.2);
+}
+
+.Archons {
+    display: flex;
+    gap: 30px;
+    padding: 30px 0;
+}
+
+.cartao-Archons {
+    display: flex; /* Enable flexbox */
+    flex-direction: column; /* Stack items vertically */
+    align-items: center; /* Center horizontally */
+    justify-content: center; /* Center vertically */
+    display: none; /* Ensure it stays hidden until activated */
+    max-width: 360px; /* Adjust this to your desired width */
+    border-radius: 15px; /* Slightly larger radius for a softer look */
+    box-shadow: rgba(0, 0, 0, 0.5) 0px 10px 30px; /* Darker shadow for depth */
+    transition: transform 0.3s ease-in-out; /* Animation for hover effect */
+    overflow: none; /* Prevent overflow of elements */
+}
+
+.cartao-Archons.aberto {
+    display: block;
+}
+
+.cartao-Archons img {
+    max-width: 650px; /* Maximum width */
+    max-height: 600px; /* Maximum height */
+    width: auto; /* Auto width to maintain aspect ratio */
+    height: auto; /* Auto height to maintain aspect ratio */
+    margin-top: 10px; /* Space above the image */
+    border-radius: 15px; /* Match the card's rounded corners */
+    display: block; /* Ensure it behaves as a block element for centering */
+}
+
+
+.cartao-Archons .cartao-topo {
+    padding: 20px;
+    border-radius: 15px;
+    background: rgba(0, 0, 0, 0.6); /* Semi-transparent background */
+    border-bottom-left-radius: 15px;
+    border-bottom-right-radius: 15px;
+}
+
+.cartao-Archons .nome {
+    font-size: 24px; /* Larger font size for names */
+    margin-bottom: 5px;
+}
+
+.cartao-Archons .tipo {
+    background-color: rgba(255, 255, 255, 0.438); /* Semi-transparent background */
+    font-size: 14px;
+    opacity: 0.9;
+    border-radius: 10px;
+    padding: 5px 10px;
+    text-align: center; /* Center the type text */
+}
+
+.cartao-Archons .detalhes {
+    color: #ffffff;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.cartao-Archons .cartao-informacoes {
+    background-color: rgba(255, 255, 255, 0.9);
+    display: flex;
+    justify-content: space-between;
+    padding: 20px;
+    border-top: 2px solid #f0b16b; /* Highlight the border with a color */
+    border-bottom-left-radius: 15px;
+    border-bottom-right-radius: 15px;
+}
+
+.cartao-Archons .cartao-informacoes h3 {
+    font-size: 20px;
+    margin-bottom: 10px;
+    color: #ff6f61; /* Change header color */
+    text-align: center; /* Center align */
+}
+
+.cartao-Archons .cartao-informacoes .descricao {
+    padding: 0 10px;
+    font-size: 14px;
+    max-height: 150px;
+    overflow-y: auto; /* Add scroll if text overflows */
+    color: #333; /* Darker color for description for readability */
+}
+
+.listagem .Archons {
+    background-color: rgba(107, 114, 122, 0.9); /* Base color for the item */
+    color: #ffffff;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 15px; /* Increased padding for comfort */
+    margin-bottom: 15px; /* Added space between items */
+    cursor: pointer;
+    border-radius: 20px; /* Rounded corners */
+    transition: 0.3s ease-in-out; /* Smooth transition for hover effect */
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3); /* Add shadow for depth */
+}
+
+/* Hover effect for the item */
+.listagem .Archons:hover {
+    transform: translateY(-5px); /* Lift effect on hover */
+    background-color: rgba(133, 236, 193, 0.9); /* Highlight color on hover */
+    box-shadow: 0 8px 25px rgba(133, 236, 193, 0.5); /* Enhanced glow on hover */
+}
+
+.listagem .Archons span {
+    padding-right: 10px;
+    font-weight: bold; /* Make text stand out */
+}
+
+/* Active state for the item */
+.listagem .Archons.ativo {
+    background-color: rgba(133, 236, 193, 1); /* Solid active item color */
+}
+
+/* Add a transition effect to the image */
+.listagem .Archons img {
+    width: 30%; /* Size of the icons */
+    border-radius: 10px; /* Rounded icons */
+    transition: transform 0.3s ease; /* Smooth scaling */
+}
+
+.listagem .Archons img:hover {
+    transform: scale(1.1); /* Slightly enlarge the image on hover */
+}
+
+.section {
+    display: none; /* Hide all sections by default */
+  }
+  
+.section.active {
+    display: block; /* Show only the active section */
+}
+
+.cartao-Aimagem {
+    position: relative; /* Allows positioning of child elements */
+    width: 600px; /* Set the width of the card */
+    height: 450px; /* Set the height of the card */
+    margin: 20px; /* Margin around the card */
+    padding: center;
+    padding-bottom: 14%;
+    pointer-events: none;
+    margin-left: -39%;
+    border-radius: 15px; /* Rounded corners */
+    overflow: none; /* Ensures the image doesn't overflow */
+    background: linear-gradient(135deg, #a2c8e000, #f1f7ff00); /* Soft gradient background */
+    display: flex; /* Center content */
+    align-items: center; /* Align items vertically */
+    justify-content: center; /* Align items horizontally */
+    transition: transform 0.3s ease, box-shadow 0.3s ease; /* Transition effects */
+}
+
+.cartao-Aimagem img {
+    pointer-events: none;
+    width: 100%; /* Image takes up 100% of card width */
+    height: auto; /* Keep the aspect ratio */
+    border-radius: 10px; /* Rounded corners for the image */
+    filter: drop-shadow(0 4px 6px rgba(0, 0, 0, 0.2)); /* Subtle shadow effect on image */
+}
+
+
+.cartao-Aimagem::before {
+    content: ""; /* Necessary for the pseudo-element */
+    position: absolute; /* Positioning it inside the card */
+    top: 10px; /* Position from the top */
+    left: 10px; /* Position from the left */
+    right: 10px; /* Position from the right */
+    bottom: 10px; /* Position from the bottom */
+    border-radius: 15px; /* Match the card's corners */
+    z-index: 0; /* Behind the image */
+}
+
+.cartao-Aimagem img {
+    z-index: 1; /* Image on top */
+    position: relative; /* Positioning context for the image */
+}
+
+

@@ -1,0 +1,50 @@
+@import url('https://fonts.googleapis.com/css2?family=Zen+Kaku+Gothic+New:wght@400;700&display=swap');
+
+.animated-prompt {
+    font-family: 'Zen Kaku Gothic New', sans-serif; /* Game-inspired font */
+    font-size: 28px; /* Large font for visibility */
+    color: #E5D4B1; /* Light color for the text */
+    text-align: center;
+    position: relative; /* For animations */
+    margin-top: 30px;
+    animation: fadeIn 2s ease-in-out, pulse 2s infinite; /* Combine animations */
+    opacity: 0; /* Start hidden */
+    animation-fill-mode: forwards; /* Retain final state after fade-in */
+    text-shadow: 0 0 5px rgba(255, 255, 255, 0.5), 0 0 10px rgba(159, 226, 255, 0.8), 0 0 20px rgba(0, 255, 255, 0.7); /* Glowing effect */
+}
+
+
+@keyframes fadeIn {
+    0% {
+        opacity: 0;
+        transform: translateY(-20px);
+    }
+    100% {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+
+@keyframes pulse {
+    0%, 100% {
+        transform: scale(1);
+    }
+    50% {
+        transform: scale(1.05); /* Slightly larger in the middle of the animation */
+    }
+}
+
+
+.animated-prompt:hover {
+    color: #76ffb4; /* Change color on hover */
+    text-shadow: 0 0 20px rgba(255, 255, 255, 0.5), 0 0 30px rgba(159, 226, 255, 0.8); /* Increase glow effect */
+    transition: color 0.3s ease, text-shadow 0.3s ease;
+}
+
+
+@media (max-width: 768px) {
+    .animated-prompt {
+        font-size: 22px; /* Slightly smaller font on mobile devices */
+    }
+}

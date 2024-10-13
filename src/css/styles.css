@@ -1,0 +1,108 @@
+html, body {
+    height: 100%; /* Ensures the body and html take the full height of the viewport */
+    margin: 0;
+    padding: 0;
+    overflow-x: hidden; /* Prevents horizontal scrolling */
+}
+
+body {
+    font-family: "Poppins", sans-serif;
+    background-image: url("../images/background.png");
+    background-size: cover; /* Cover the entire viewport */
+    background-position: center; /* Center the background */
+    background-repeat: no-repeat; /* Prevent repeating */
+    color: #ffffff;
+    position: relative;
+}
+
+body::before {
+    content: "";
+    position: fixed; /* Keeps the background fixed to the viewport */
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: -1;
+    backdrop-filter: blur(15px); /* Increased blur for a more dreamlike effect */
+    background: rgba(0, 0, 0, 0.6); /* Darker overlay for improved readability */
+}
+
+main {
+    display: flex;
+    flex-direction: column; /* Stack items vertically */
+    justify-content: center;
+    align-items: center;
+    padding: 50px; /* Reduced padding for a more compact layout */
+    min-height: 100vh;
+    max-width: 1200px; /* Limit the main content width */
+    margin: 0 auto; /* Center the content on larger screens */
+}
+
+
+.Genshin-Impact {
+    width: 45%; /* Slightly reduce the image width for balance */
+    margin-bottom: 20px; /* More space below the logo */
+    border-radius: 12px; /* Softer corners */
+    animation: fadeIn 1s ease-in-out; /* Fade-in effect for the logo */
+}
+
+@keyframes fadeIn {
+    from { opacity: 0; }
+    to { opacity: 1; }
+}
+
+
+.description {
+    font-family: 'Genshin', sans-serif; /* Ensure the correct font is used */
+    font-size: 19px; /* Larger font for better readability */
+    line-height: 1.6; /* Increased line height for better spacing */
+    color: #E5D4B1; 
+    margin: 20px 0;
+    padding-top: 175px; /* Adjusted padding for better spacing */
+    max-width: 90%; /* Limit paragraph width */
+    background: none; /* No background box */
+    text-shadow: 2px 2px 8px rgba(0, 0, 0, 0.5); /* Enhanced shadow for depth */
+    letter-spacing: 0.02em;
+    text-align: justify;
+}
+
+
+#animated-prompt {
+    position: absolute;
+    bottom: 30px; /* Position it at the bottom */
+    left: 50%; /* Center horizontally */
+    transform: translateX(-50%); /* Adjust for centering */
+    font-size: 20px; /* Increased font size for better visibility */
+    color: #E5D4B1; /* Text color */
+    text-shadow: 
+        0 0 10px rgba(0, 0, 0, 0.8),  /* Darker shadow */
+        0 0 20px rgba(255, 255, 255, 0.4); /* Lighter glow effect */
+    animation: pulse 1.5s infinite; /* Add a pulse effect */
+    z-index: 1; /* Ensure it's above other elements */
+}
+
+
+@keyframes pulse {
+    0%, 100% {
+        opacity: 0.8; /* Start and end slightly transparent */
+    }
+    50% {
+        opacity: 1; /* Fully visible at the middle */
+    }
+}
+
+
+@media (max-width: 768px) {
+    .description {
+        font-size: 16px; /* Adjusted font size for smaller screens */
+        padding: 15px; /* More space for padding */
+    }
+
+    .Genshin-Impact {
+        width: 40%; /* Scale down the image for smaller screens */
+    }
+
+    #continue-prompt {
+        font-size: 14px; /* Smaller font for prompt */
+    }
+}
