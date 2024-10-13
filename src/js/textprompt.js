@@ -1,6 +1,7 @@
 const config = {
     redirectUrl: './src/html/gnosis.html', // The URL to redirect to
-    keyEvent: 'keydown', // The event type to listen for (click, keydown, etc.)
+    keyEvent: 'keydown', // The event type to listen for on desktop
+    touchEvent: 'touchstart' // The event type to listen for on mobile
 };
 
 // Function to handle redirection with a smooth transition
@@ -14,13 +15,21 @@ function handleRedirection() {
     }, 300); // Match this timeout with the CSS transition duration
 }
 
-// Event listener for clicks on the document
-document.addEventListener(config.clickEvent, handleRedirection);
+// Detect if the user is on a mobile device or a desktop
+const isMobile = () => {
+    return /Mobi|Android/i.test(navigator.userAgent);
+};
 
-// Event listener for keyboard events
-document.addEventListener(config.keyEvent, handleRedirection);
+// Add appropriate event listeners based on the device type
+if (isMobile()) {
+    // Event listener for touch events on mobile devices
+    document.addEventListener(config.touchEvent, handleRedirection);
+} else {
+    // Event listener for keyboard events on desktop
+    document.addEventListener(config.keyEvent, handleRedirection);
+}
 
-// Adding a fade-out effect to the body
+// Adding a fade-in effect to the body
 document.body.classList.add('fade-in');
 
 document.addEventListener('DOMContentLoaded', () => {
